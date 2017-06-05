@@ -1,0 +1,20 @@
+#RewriteEngine bekapcsolása
+RewriteEngine On
+
+#Ha a lekért URL nem fájl
+#RewriteCond %{REQUEST_FILENAME} !-f
+
+#Ha a lekért URL nem könyvtárr
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#Olyan kérés aminek a formátuma
+RewriteRule \.(xml|ico|eot|svg|ttf|woff|otf|js|css|gif|jpe?g|png)$ - [L]
+
+#ajax-ot ignorálja pl: ha kosárba rakom ne frissuljön az oldal
+RewriteRule ^ajax/ - [NC,L]
+
+#BackEnd ami csak koddal érhető el
+RewriteRule ^admin/ admin/index.php [NC,L]
+
+#FrontEnd
+RewriteRule ^(.*) index.php [NC,L]

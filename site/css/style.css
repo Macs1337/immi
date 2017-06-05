@@ -1,0 +1,28 @@
+body{
+	margin: 0px;
+}
+
+ul, li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+#topnav{
+	background-color: #CCC;
+	display: flex;
+}
+
+#topnav a{
+	grow: 1;
+	padding: 10px;
+	color: #FFF;
+}
+
+#topnav a:hover{
+	background-color: #000;
+	color: yellow;
+}
